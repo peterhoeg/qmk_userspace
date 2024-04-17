@@ -6,8 +6,7 @@
   '';
   notes = ''
     Pending:
-      1. toggle 2 on F like kanata
-      2. decide what holding V does
+      1. copy map from kanata
   '';
   keyboard = "xbows/knight";
   # keyboard = "xbows/nature";
