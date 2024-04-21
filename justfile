@@ -14,14 +14,21 @@ lsp model=MODEL layout=LAYOUT:
 # Prepare keymap
 config model=MODEL layout=LAYOUT:
     #!/usr/bin/env bash
+
+    set -eEuo pipefail
+
     DIR="keyboards/xbows/{{model}}/keymaps/{{layout}}"
-    FILE="xbows_{{layout}}"
 
     echo "Generating config for xbows/{{model}}:{{layout}}"
 
+    nix2json() {
+      nix eval --json --file $1.nix | jq --sort-keys > $1.json
+    }
+
     pushd $DIR >/dev/null
-    nix eval --json --file $FILE.nix | jq --sort-keys > $FILE.json
-    qmk json2c $FILE.json > keymap.c
+    nix2json info
+    nix2json xbows_{{layout}}
+    qmk json2c xbows_{{layout}}.json > keymap.c
     popd >/dev/null
 
 # Flash the chosen `model`
