@@ -4,8 +4,8 @@ enum layers { _BASE, _WINDOWS, _ARROWS, _NUMBERS };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case C_2TAB:
-        case C_2V:
+        case L2_ESC:
+        case L2_V:
         case C_GUIA:
         case C_ALTS:
         case C_SFTD:
