@@ -10,6 +10,8 @@ list:
 # Build compile_commands.json for LSP
 lsp model=MODEL layout=LAYOUT:
     @qmk generate-compilation-database -kb xbows/{{model}} -km {{layout}}
+    @sed -i compile_commands.json \
+      -e 's/-mmcu=atmega32u4 //g'
 
 # Prepare keymap
 config model=MODEL layout=LAYOUT:

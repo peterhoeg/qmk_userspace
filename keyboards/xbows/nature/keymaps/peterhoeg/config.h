@@ -1,6 +1,4 @@
 #define LAYER_STATE_8BIT // we don't need more than 8 layers
-#define NO_MUSIC_MODE
-#define RGBLIGHT_LAYERS 2 // default is 8
 
 // Tap-and-hold settings
 // #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
@@ -11,12 +9,14 @@
 // Caps word
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
-// I don't have Cherry MX Lock switches
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
+// Lights, https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
+// #define RGBLIGHT_LAYERS 2 // default is 8
+#define RGB_MATRIX_DEFAULT_ON true
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 
-#define C_2TAB LT(2, KC_TAB)
-#define C_2V LT(2, KC_V)
+#define C_2ESC LT(2, KC_ESC)
+// #define C_2TAB LT(2, KC_TAB)
+#define C_2V LT(2, KC_V) // do we need this with the same function on caps?
 #define C_GUIA LGUI_T(KC_A)
 #define C_ALTS LALT_T(KC_S)
 #define C_SFTD LSFT_T(KC_D)
@@ -27,4 +27,8 @@
 #define C_GUIsc RGUI_T(KC_SCLN)
 #define C_CTLes LCTL_T(KC_ESC)
 
-/* "CL_CTLF" "KC_G"    "KC_BSPC"           "KC_H"    "RCTL_T(KC_J)" "RSFT_T(KC_K)" "LALT_T(KC_L)" "LGUI_T(KC_SCLN)" "KC_QUOT" "KC_BSLS"           "KC_PGDN" */
+// I don't have Cherry MX Lock switches
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+
+#define NO_MUSIC_MODE
