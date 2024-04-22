@@ -3,7 +3,8 @@
 #define RGBLIGHT_LAYERS 2 // default is 8
 
 // Tap-and-hold settings
-#define PERMISSIVE_HOLD
+// #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
+#define PERMISSIVE_HOLD  // alternative: HOLD_ON_OTHER_KEY_PRESS
 #define TAPPING_TERM 200 // default is 200
 #define TAPPING_TERM_PER_KEY
 
