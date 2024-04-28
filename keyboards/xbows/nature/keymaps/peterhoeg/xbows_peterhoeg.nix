@@ -24,40 +24,40 @@
       "KC_LCTL" "KC_LGUI" "KC_LALT"           "C_CTLes"           "KC_LGUI" "SC_RSPC" "KC_SPC"            "KC_RALT"           "TG(1)"   "KC_RCTL" "KC_LEFT" "KC_DOWN" "KC_RGHT"
     ]
     [ # windows
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"
+      "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"
 
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"                     "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_BSPC"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"                     "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_BSLS" "KC_TRNS"
-      "KC_LCTL" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_F"    "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_ENT"            "KC_TRNS"
-      "KC_LSFT" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_RSFT"           "KC_TRNS"
-      "KC_CAPS" "KC_TRNS" "KC_TRNS"           "KC_SPC"            "KC_LCTL" "KC_RSFT" "KC_TRNS"           "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"
+      "___"     "___"     "___"     "___"     "___"     "___"                         "___"     "___"     "___"     "___"     "___"     "___"     "___"     "KC_BSPC"
+      "___"     "___"     "___"     "___"     "___"     "___"                         "___"     "___"     "___"     "___"     "___"     "___"     "___"     "KC_BSLS" "___"
+      "KC_LCTL" "___"     "___"     "___"     "KC_F"    "___"     "___"               "___"     "___"     "___"     "___"     "___"     "___"     "KC_ENT"            "___"
+      "KC_LSFT" "___"     "___"     "___"     "___"     "___"     "___"               "___"     "___"     "___"     "___"     "___"     "KC_RSFT"           "___"
+      "KC_CAPS" "___"     "___"               "KC_SPC"            "KC_LCTL" "KC_RSFT" "___"               "___"               "___"     "___"     "___"     "___"     "___"
     ]
     [ # arrows
-      "QK_BOOT" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "NK_TOGG" "EE_CLR"
+      "QK_BOOT" "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "NK_TOGG" "EE_CLR"
 
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"                     "KC_NUM"  "KC_PSCR" "KC_INS"  "KC_DEL"  "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_MUTE"
-      "RGB_TOG" "RGB_SPI" "RGB_VAI" "RGB_HUI" "RGB_MOD" "KC_TRNS"                     "KC_TRNS" "KC_HOME" "KC_UP"   "KC_PGUP" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"
-      "KC_TRNS" "RGB_SPD" "RGB_VAD" "RGB_HUD" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_LEFT" "KC_DOWN" "KC_RGHT" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_END"  "KC_TRNS" "KC_PGDN" "KC_TRNS" "KC_MUTE"           "KC_VOLU"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS"           "TG(0)"   "KC_MPLY" "KC_MPRV" "KC_VOLD" "KC_MNXT"
+      "___"     "___"     "___"     "___"     "___"     "___"                         "KC_NUM"  "KC_PSCR" "KC_INS"  "KC_DEL"  "___"     "___"     "___"     "KC_MUTE"
+      "RGB_TOG" "RGB_SPI" "RGB_VAI" "RGB_HUI" "RGB_MOD" "___"                         "___"     "KC_HOME" "KC_UP"   "KC_PGUP" "___"     "___"     "___"     "___"     "___"
+      "___"     "RGB_SPD" "RGB_VAD" "RGB_HUD" "___"     "___"     "___"               "___"     "KC_LEFT" "KC_DOWN" "KC_RGHT" "___"     "___"     "___"               "___"
+      "___"     "___"     "___"     "___"     "___"     "___"     "___"               "___"     "KC_END"  "___"     "KC_PGDN" "___"     "KC_MUTE"           "KC_VOLU"
+      "___"     "___"     "___"               "___"               "___"     "___"     "___"               "___"               "TG(0)"   "KC_MPLY" "KC_MPRV" "KC_VOLD" "KC_MNXT"
     ]
     [ # numbers
-      "KC_TAB"  "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"
+      "KC_TAB"  "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"
 
-      "KC_TAB"  "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"                       "KC_PSLS" "KC_P7"   "KC_P8"   "KC_P9"   "KC_PPLS" "KC_NO"   "KC_NO"   "KC_NO"
-      "KC_TAB"  "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"                       "KC_PAST" "KC_P4"   "KC_P5"   "KC_P6"   "KC_PCMM" "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"
-      "KC_TAB"  "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"             "KC_PMNS" "KC_P1"   "KC_P2"   "KC_P3"   "KC_PEQL" "KC_NO"   "KC_NO"             "KC_NO"
-      "KC_TAB"  "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"             "KC_NO"   "KC_P0"   "KC_NO"   "KC_PDOT" "KC_PENT" "KC_NO"             "KC_NO"
-      "KC_TAB"  "KC_NO"   "KC_NO"             "KC_NO"             "KC_NO"   "KC_NO"   "KC_NO"             "KC_NO"             "KC_TRNS" "KC_NO"   "KC_NO"   "KC_NO"   "KC_NO"
+      "KC_TAB"  "_x_"   "_x_"   "_x_"   "_x_"   "_x_"                       "KC_PSLS" "KC_P7"   "KC_P8"   "KC_P9"   "KC_PPLS" "_x_"   "_x_"   "_x_"
+      "KC_TAB"  "_x_"   "_x_"   "_x_"   "_x_"   "_x_"                       "KC_PAST" "KC_P4"   "KC_P5"   "KC_P6"   "KC_PCMM" "_x_"   "_x_"   "_x_"   "_x_"
+      "KC_TAB"  "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"             "KC_PMNS" "KC_P1"   "KC_P2"   "KC_P3"   "KC_PEQL" "_x_"   "_x_"             "_x_"
+      "KC_TAB"  "_x_"   "_x_"   "_x_"   "_x_"   "_x_"   "_x_"             "_x_"   "KC_P0"   "_x_"   "KC_PDOT" "KC_PENT" "_x_"             "_x_"
+      "KC_TAB"  "_x_"   "_x_"             "_x_"             "_x_"   "_x_"   "_x_"             "_x_"             "___" "_x_"   "_x_"   "_x_"   "_x_"
     ]
     [ # danish
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"
+      "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"
 
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"                     "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_BSPC"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "DK_AE"   "KC_TRNS" "KC_TRNS"                     "KC_TRNS" "KC_TRNS" "KC_TRNS" "DK_OE"   "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_BSLS" "KC_TRNS"
-      "KC_TRNS" "DK_AA"   "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_ENT"            "KC_TRNS"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_RSFT"           "KC_TRNS"
-      "KC_TRNS" "KC_TRNS" "KC_TRNS"           "KC_SPC"            "KC_LCTL" "KC_RSFT" "KC_TRNS"           "KC_TRNS"           "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS" "KC_TRNS"
+      "___" "___" "___" "___" "___" "___"                     "___" "___" "___" "___" "___" "___" "___" "KC_BSPC"
+      "___" "___" "___" "DK_AE"   "___" "___"                     "___" "___" "___" "DK_OE"   "___" "___" "___" "KC_BSLS" "___"
+      "___" "DK_AA"   "___" "___" "___" "___" "___"           "___" "___" "___" "___" "___" "___" "KC_ENT"            "___"
+      "___" "___" "___" "___" "___" "___" "___"           "___" "___" "___" "___" "___" "KC_RSFT"           "___"
+      "___" "___" "___"           "KC_SPC"            "KC_LCTL" "KC_RSFT" "___"           "___"           "___" "___" "___" "___" "___"
     ]
   ];
 }
