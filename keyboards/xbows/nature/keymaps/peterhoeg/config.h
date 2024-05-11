@@ -3,7 +3,7 @@
 // Tap-and-hold settings
 // #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD  // alternative: HOLD_ON_OTHER_KEY_PRESS
-#define TAPPING_TERM 200 // default is 200
+#define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
 
 // Caps word
@@ -11,7 +11,7 @@
 
 // Lights, https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
 // #define RGBLIGHT_LAYERS 2 // default is 8
-#define RGB_MATRIX_DEFAULT_ON true
+#define RGB_MATRIX_DEFAULT_ON false
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 
 #define L2_ESC LT(2, KC_ESC)
