@@ -2,7 +2,8 @@
 
 // Tap-and-hold settings
 // #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
-#define PERMISSIVE_HOLD  // alternative: HOLD_ON_OTHER_KEY_PRESS
+#define PERMISSIVE_HOLD // alternative: HOLD_ON_OTHER_KEY_PRESS
+#define PERMISSIVE_HOLD_PER_KEY
 #define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
 
