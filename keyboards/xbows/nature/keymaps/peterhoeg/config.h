@@ -13,7 +13,8 @@
 // Lights, https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
 // #define RGBLIGHT_LAYERS 2 // default is 8
 #define RGB_MATRIX_DEFAULT_ON false
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+/* #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE */
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_NONE
 
 #define L2_ESC LT(2, KC_ESC)
 // #define C_2TAB LT(2, KC_TAB)
