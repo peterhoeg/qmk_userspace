@@ -35,6 +35,7 @@ config model=MODEL layout=LAYOUT:
 flash model layout:
     make xbows/{{model}}:{{layout}}:flash
 
+[private]
 _do model: (lsp model LAYOUT) (config model LAYOUT) (flash model LAYOUT)
 
 # X-Bows Knight
