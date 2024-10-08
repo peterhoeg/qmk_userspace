@@ -18,7 +18,9 @@
 
 #define L2_ESC LT(2, KC_ESC)
 // #define C_2TAB LT(2, KC_TAB)
-#define L4_V LT(4, KC_V)
+#define L3_ESC LT(3, KC_ESC) // mouse via ESC
+#define L3_TAB LT(3, KC_TAB) // mouse via TAB
+#define L5_V LT(5, KC_V)
 
 #define C_CTLes LCTL_T(KC_ESC)
 

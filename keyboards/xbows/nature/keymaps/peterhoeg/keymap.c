@@ -19,7 +19,9 @@ combo_t key_combos[] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case L2_ESC:
-        case L4_V:
+        case L3_ESC:
+        case L3_TAB:
+        case L5_V:
         case C_GUIA:
           return 150;
         case C_ALTS:
