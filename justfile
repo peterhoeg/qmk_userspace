@@ -31,6 +31,10 @@ config model=MODEL layout=LAYOUT:
     qmk json2c xbows_{{layout}}.json | sed 1d > keymap_generated.c
     popd >/dev/null
 
+# Build the chosen `model`
+build model layout:
+    make xbows/{{model}}:{{layout}}:build
+
 # Flash the chosen `model`
 flash model layout:
     make xbows/{{model}}:{{layout}}:flash
