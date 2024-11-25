@@ -1,6 +1,6 @@
 enum unicode_names {
-    AE_LOWER,
-    AE_UPPER,
+  AE_LOWER,
+  AE_UPPER,
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -9,3 +9,7 @@ const uint32_t PROGMEM unicode_map[] = {
     [AE_LOWER] = 0x00E6, // æ
     [AE_UPPER] = 0x00C6, // Æ
 };
+
+/* Local Variables: */
+/* +format-with-lsp: nil */
+/* End: */

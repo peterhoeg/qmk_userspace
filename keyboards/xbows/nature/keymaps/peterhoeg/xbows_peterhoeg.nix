@@ -7,6 +7,11 @@
   notes = ''
     Pending:
       1. copy map from kanata
+
+    Notes:
+      1. Regular shift in order to have clever caps lock on shift double-tap instead of
+         shift/bracket: https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#space-cadet-space-cadet
+      2. Space cadet mappings for the ALT keys instead
   '';
   keyboard = "xbows/knight";
   # keyboard = "xbows/nature";
@@ -20,8 +25,8 @@
       "L3_TAB"  "KC_Q"    "KC_W"    "KC_E"    "KC_R"    "KC_T"                        "KC_Y"    "KC_U"    "KC_I"    "KC_O"    "KC_P"    "KC_LBRC" "KC_RBRC" "KC_ENT"  "KC_PGUP"
       "L2_ESC"  "C_GUIA"  "C_ALTS"  "C_SFTD"  "C_CTLF"  "KC_G"    "KC_BSPC"           "KC_H"    "C_CTLJ"  "C_SFTK"  "C_ALTL"  "C_GUIsc" "KC_QUOT" "KC_BSLS"           "KC_PGDN"
 
-      "SC_LSPO" "KC_Z"    "KC_X"    "KC_C"    "L5_V"    "KC_B"    "KC_ENT"            "KC_N"    "KC_M"    "KC_COMM" "KC_DOT"  "KC_SLSH" "KC_RSFT"           "KC_UP"
-      "KC_LCTL" "KC_LGUI" "KC_LALT"           "C_CTLes"           "KC_LGUI" "SC_RSPC" "KC_SPC"            "KC_RALT"           "TG(1)"   "KC_RCTL" "KC_LEFT" "KC_DOWN" "KC_RGHT"
+      "KC_LSFT" "KC_Z"    "KC_X"    "KC_C"    "L5_V"    "KC_B"    "KC_ENT"            "KC_N"    "KC_M"    "KC_COMM" "KC_DOT"  "KC_SLSH" "KC_RSFT"           "KC_UP"
+      "KC_LCTL" "KC_LGUI" "SC_LAPO"           "C_CTLes"           "KC_LGUI" "KC_RSFT" "KC_SPC"            "SC_RAPC"           "TG(1)"   "KC_RCTL" "KC_LEFT" "KC_DOWN" "KC_RGHT"
     ]
     [ # windows
       "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"
@@ -72,5 +77,5 @@
 }
 
 # Local Variables:
-# apheleia-inhibit: 't
+# apheleia-inhibit: t
 # End:
