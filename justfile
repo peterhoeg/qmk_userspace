@@ -29,6 +29,7 @@ config model=MODEL layout=LAYOUT:
     nix2json info
     nix2json xbows_{{layout}}
     qmk json2c xbows_{{layout}}.json | sed 1d > keymap_generated.c
+    qmkfmt keymap_generated.c
     popd >/dev/null
 
 # Build the chosen `model`
