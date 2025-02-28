@@ -1,7 +1,7 @@
 #define LAYER_STATE_8BIT // we don't need more than 8 layers
 
 // Tap-and-hold settings
-#define CHORDAL_HOLD
+// #define CHORDAL_HOLD
 // #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD // alternative: HOLD_ON_OTHER_KEY_PRESS
 #define PERMISSIVE_HOLD_PER_KEY

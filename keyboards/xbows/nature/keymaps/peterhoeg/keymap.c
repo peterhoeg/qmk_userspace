@@ -58,6 +58,18 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
+// this is temporary until I have it properly set up
+char chordal_hold_handedness(keypos_t key) {
+  /*
+  if (key.col == 0 || key.col == MATRIX_COLS - 1) {
+      return '*';  // Exempt the outer columns.
+  }
+  */
+  // On split keyboards, typically, the first half of the rows are on the
+  // left, and the other half are on the right.
+  return key.col < MATRIX_COLS / 2 ? 'L' : 'R';
+}
+
 #define ___ KC_TRNS
 #define _x_ KC_NO
 
