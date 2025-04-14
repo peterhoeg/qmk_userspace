@@ -1,7 +1,6 @@
 #if __has_include("keymap.h")
-#    include "keymap.h"
+#include "keymap.h"
 #endif
-
 
 /* THIS FILE WAS GENERATED!
  *
@@ -33,3 +32,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef OTHER_KEYMAP_C
 #include OTHER_KEYMAP_C
 #endif // OTHER_KEYMAP_C
+
