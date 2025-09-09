@@ -7,6 +7,7 @@
 #define PERMISSIVE_HOLD_PER_KEY
 #define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
+#define FLOW_TAP_TERM 150
 
 // Caps word
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
