@@ -41,8 +41,8 @@
       "QK_BOOT" "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "___"     "NK_TOGG" "EE_CLR"
 
       "___"     "___"     "___"     "___"     "___"     "___"                         "KC_NUM"  "KC_PSCR" "KC_INS"  "KC_DEL"  "___"     "___"     "___"     "KC_MUTE"
-      "RGB_TOG" "RGB_SPI" "RGB_VAI" "RGB_HUI" "RGB_MOD" "___"                         "___"     "KC_HOME" "KC_UP"   "KC_PGUP" "___"     "___"     "___"     "___"     "___"
-      "___"     "RGB_SPD" "RGB_VAD" "RGB_HUD" "___"     "___"     "___"               "___"     "KC_LEFT" "KC_DOWN" "KC_RGHT" "___"     "___"     "___"               "___"
+      "UG_TOGG" "UG_SPDU" "UG_VALU" "UG_HUEU" "UG_NEXT" "___"                         "___"     "KC_HOME" "KC_UP"   "KC_PGUP" "___"     "___"     "___"     "___"     "___"
+      "___"     "UG_SPDD" "UG_VALD" "UG_HUED" "___"     "___"     "___"               "___"     "KC_LEFT" "KC_DOWN" "KC_RGHT" "___"     "___"     "___"               "___"
       "___"     "___"     "___"     "___"     "___"     "___"     "___"               "___"     "KC_END"  "___"     "KC_PGDN" "___"     "KC_MUTE"           "KC_VOLU"
       "___"     "___"     "___"               "___"               "___"     "___"     "___"               "___"               "TG(0)"   "KC_MPLY" "KC_MPRV" "KC_VOLD" "KC_MNXT"
     ]
