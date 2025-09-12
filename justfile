@@ -28,7 +28,7 @@ config maker=MAKER model=MODEL layout=LAYOUT:
       nix eval --json --file $1.nix | jq --sort-keys > $1.json
     }
 
-    push $DIR >/dev/null
+    pushd $DIR >/dev/null
     for f in info {{ maker }}_{{ layout }}; do
       nix2json "$f"
     done
