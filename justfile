@@ -7,7 +7,7 @@ default: list
 
 # Show the available targets
 list:
-    @just -l --justfile {{ justfile() }}
+    @just -l --justfile {{ justfile() }} --list-submodules
 
 # Build compile_commands.json for LSP
 [private]
