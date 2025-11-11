@@ -7,6 +7,7 @@
 #define PERMISSIVE_HOLD_PER_KEY
 #define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
+#define USB_POLLING_INTERVAL_MS 5 // maybe this makes things work on the nature board with
 #define FLOW_TAP_TERM 150
 
 // Caps word
