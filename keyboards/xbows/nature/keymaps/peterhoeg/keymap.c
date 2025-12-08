@@ -2,22 +2,28 @@
 
 enum layers { _BASE, _WINDOWS, _ARROWS, _NUMBERS, _DANISH };
 
-// combos
+/// Combo definitions
 const uint16_t PROGMEM combo_parens_left[] = {KC_Q, KC_W, COMBO_END};
-/* const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END}; */
+const uint16_t PROGMEM combo_dk_ae[] = {KC_A, KC_E, COMBO_END};
 
+/// Combos to output
 combo_t key_combos[] = {
     COMBO(combo_parens_left, KC_LPRN),
-    // COMBO(test_combo2, LCTL(KC_Z)),
+    COMBO(combo_dk_ae, UP(0xe6, 0xc6)),
 };
 
 #include "keymap_dk.c"
 
 // #include "keymap_rgb.c"
 
-// tapping
+/// Custom tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+#ifdef DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+  // when we lower the TAPPING_TERM it becomes really hard to trigger, so bump this
+  case KC_LSFT:
+    return 250;
+#endif
   case L2_ESC:
   case L3_ESC:
   case L3_TAB:
@@ -48,6 +54,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
+/**
+ *  Permissive hold
+ *  @param keycode The keycode to check for
+ *  @param record The key record
+ *
+ *  @returns bool
+ */
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
   case C_GUIA:
@@ -58,7 +71,11 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
-// this is temporary until I have it properly set up
+/**
+ *  This is temporary until I have it properly set up
+ *
+ *  @param key The key in question
+ */
 char chordal_hold_handedness(keypos_t key) {
   // exempt the left column and the last row
   if (key.col == 0 || key.row == MATRIX_ROWS - 1) {

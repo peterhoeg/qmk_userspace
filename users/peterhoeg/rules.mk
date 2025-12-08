@@ -10,4 +10,6 @@ MIDI_ENABLE = no
 MUSIC_ENABLE = no
 NKRO_ENABLE = no
 TAP_DANCE_ENABLE = no # need to implement the handler function for this to work
+UNICODE_COMMON = yes
+UNICODE_ENABLE = yes
 UNICODE_MAP_ENABLE = yes

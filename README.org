@@ -1,0 +1,10 @@
+* QMK
+
+** Tasks
+
+- [ ] set up build action to pull latest and build to verify
+- [ ] key combos for DK characters
+
+** Reference
+- https://docs.qmk.fm/features/unicode
+- https://docs.qmk.fm/features/combo
