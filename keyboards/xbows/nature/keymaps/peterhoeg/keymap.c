@@ -1,6 +1,9 @@
 #include QMK_KEYBOARD_H
 
-enum layers { _BASE, _WINDOWS, _ARROWS, _NUMBERS, _DANISH };
+// `QK_USER` avoids collisions with existing keycodes. or should I use `SAFE_RANGE` ?
+enum keycodes { PH_NOT_IN_USE_YET = QK_USER };
+
+enum layers { _BASE = 0, _WINDOWS, _ARROWS, _MOUSE, _NUMBERS, _DANISH };
 
 /// Combo definitions
 const uint16_t PROGMEM combo_parens_left[] = {KC_Q, KC_W, COMBO_END};
@@ -85,9 +88,6 @@ char chordal_hold_handedness(keypos_t key) {
   // left, and the other half are on the right.
   return key.col < MATRIX_COLS / 2 ? 'L' : 'R';
 }
-
-#define ___ KC_TRNS
-#define _x_ KC_NO
 
 #include "keymap_generated.c"
 

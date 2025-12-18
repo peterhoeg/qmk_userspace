@@ -1,6 +1,6 @@
 MAKER := "xbows"
-MODEL := "knight"
 LAYOUT := "peterhoeg"
+MODEL := if `hostname` == "dolores" { "knight" } else { "nature" }
 
 [private]
 default: list
@@ -41,18 +41,19 @@ _make maker model layout sub:
     make {{ maker }}/{{ model }}:{{ layout }}:{{ sub }}
 
 # Build the chosen `model`
-[private]
-build maker=MAKER model=MODEL layout=LAYOUT: (_make maker model layout "build")
+@build maker=MAKER model=MODEL layout=LAYOUT: (_make maker model layout "build")
 
 # Flash the chosen `model`
-[private]
-flash maker=MAKER model=MODEL layout=LAYOUT: (_make maker model layout "flash")
+@flash maker=MAKER model=MODEL layout=LAYOUT: (_make maker model layout "flash")
 
 [private]
-_do maker model target: (lsp maker model LAYOUT) (config maker model LAYOUT) (_make maker model LAYOUT target)
+@_do maker model target: (config maker model LAYOUT) (_make maker model LAYOUT target)
 
 # X-Bows Knight
 @knight target="flash": (_do MAKER "knight" target)
 
 # X-Bows Nature v3
 @nature target="flash": (_do MAKER "nature" target)
+
+# Development
+@dev: (config MAKER MODEL LAYOUT) (lsp MAKER MODEL LAYOUT)
