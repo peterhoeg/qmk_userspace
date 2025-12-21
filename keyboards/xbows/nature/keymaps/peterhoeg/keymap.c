@@ -1,10 +1,5 @@
 #include QMK_KEYBOARD_H
 
-// `QK_USER` avoids collisions with existing keycodes. or should I use `SAFE_RANGE` ?
-enum keycodes { PH_NOT_IN_USE_YET = QK_USER };
-
-enum layers { _BASE = 0, _WINDOWS, _ARROWS, _MOUSE, _NUMBERS, _DANISH };
-
 /// Combo definitions
 const uint16_t PROGMEM combo_parens_left[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM combo_dk_ae[] = {KC_A, KC_E, COMBO_END};
