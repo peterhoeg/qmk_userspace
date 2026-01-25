@@ -2,10 +2,8 @@ MAKER := "xbows"
 LAYOUT := "peterhoeg"
 MODEL := if `hostname` == "dolores" { "knight" } else { "nature" }
 
-[private]
-default: list
-
 # Show the available targets
+[default]
 list:
     @just -l --justfile {{ justfile() }} --list-submodules
 
