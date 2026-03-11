@@ -1,13 +1,19 @@
 enum unicode_names {
   AE_LOWER,
   AE_UPPER,
+  OE_LOWER,
+  OE_UPPER,
+  AA_LOWER,
+  AA_UPPER,
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    /* [AE_LOWER] = 0x203D,  // æøå  */
-    /* [AE_UPPER] = 0x2E2E,  //  */
     [AE_LOWER] = 0x00E6, // æ
     [AE_UPPER] = 0x00C6, // Æ
+    [OE_LOWER] = 0x00F8, // ø
+    [OE_UPPER] = 0x00D8, // Ø
+    [AA_LOWER] = 0x00E5, // å
+    [AA_UPPER] = 0x00C5, // Å
 };
 
 /* Local Variables: */

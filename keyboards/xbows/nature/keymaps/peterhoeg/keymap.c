@@ -12,8 +12,6 @@ combo_t key_combos[] = {
 
 #include "keymap_dk.c"
 
-// #include "keymap_rgb.c"
-
 /// Custom tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -22,28 +20,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   case KC_LSFT:
     return 250;
 #endif
-  case L2_ESC:
-  case L3_ESC:
-  case L3_TAB:
-  case L5_V:
-  case C_GUIA:
-    return 150;
-  case C_ALTS:
-    return 150;
-  case C_SFTD:
-    return 150;
-  case C_CTLF:
-    return 150;
-  case C_CTLJ:
-    return 150;
-  case C_SFTK:
-    return 150;
-  case C_ALTL:
-    return 150;
-  case C_GUIsc:
-    return TAPPING_TERM;
-  case C_CTLes:
-    return 150;
   case SC_LAPO:
   case SC_RAPC:
     return 100;

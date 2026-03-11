@@ -8,7 +8,7 @@
 #define PERMISSIVE_HOLD_PER_KEY
 #define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
-#define USB_POLLING_INTERVAL_MS 5 // maybe this makes things work on the nature board with
+#define USB_POLLING_INTERVAL_MS 5
 #define FLOW_TAP_TERM 150
 
 // Caps word
@@ -20,8 +20,6 @@
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_NONE
 
 #define L2_ESC LT(2, KC_ESC)
-// #define C_2TAB LT(2, KC_TAB)
-#define L3_ESC LT(3, KC_ESC) // mouse via ESC
 #define L3_TAB LT(3, KC_TAB) // mouse via TAB
 #define L5_V LT(5, KC_V)
 
@@ -39,8 +37,8 @@
 
 // Danish characters
 #define DK_AE UP(AE_LOWER, AE_UPPER)
-#define DK_OE UP(AE_LOWER, AE_UPPER)
-#define DK_AA UP(AE_LOWER, AE_UPPER)
+#define DK_OE UP(OE_LOWER, OE_UPPER)
+#define DK_AA UP(AA_LOWER, AA_UPPER)
 
 #define ___ KC_TRNS
 #define _x_ KC_NO
