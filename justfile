@@ -78,6 +78,9 @@ alias mildred := nature
 # X-Bows Nature v3
 @nature target="flash": (_do MAKER "nature" target)
 
+# ZSA Moonlander
+@moonlander target="flash": (_do "zsa" "moonlander" target)
+
 # Development
 @dev: (config MAKER MODEL LAYOUT) (lsp MAKER MODEL LAYOUT)
 

@@ -2,6 +2,7 @@
     "userspace_version": "1.0",
     "build_targets": [
         ["xbows/nature", "peterhoeg"],
-        ["xbows/knight", "peterhoeg"]
+        ["xbows/knight", "peterhoeg"],
+        ["zsa/moonlander", "peterhoeg"]
     ]
 }
