@@ -5,6 +5,57 @@
 - [ ] set up build action to pull latest and build to verify
 - [ ] key combos for DK characters
 
+** Code organisation
+
+Shared code lives in =users/peterhoeg/=, keyboard-specific code in
+=keyboards/<maker>/<model>/keymaps/peterhoeg/=.
+
+*** =users/peterhoeg/= - shared across all keyboards
+
+- =config.h= - tap-hold settings, home-row mod aliases, layer-tap aliases,
+  Danish character macros, transparency aliases, disabled features
+- =peterhoeg.c= - custom keycodes, combo definitions, =get_tapping_term()=,
+  =get_permissive_hold()=, =process_record_user()=
+- =keymap_dk.c= - Danish unicode character map (included by =peterhoeg.c=)
+- =rules.mk= - QMK feature flags (combos, caps word, NKRO, unicode, etc.)
+
+The shared =config.h= is auto-included by QMK before any keyboard config.
+The shared =peterhoeg.c= is textually included (=#include "peterhoeg.c"=)
+from each keyboard's =keymap.c= so that QMK's combo introspection can find
+=key_combos[]= in the keymap compilation unit.
+
+*** =keyboards/<maker>/<model>/keymaps/peterhoeg/= - per-keyboard
+
+- =<maker>_peterhoeg.nix= - declarative keymap definition (layer keys
+  matching this keyboard's physical layout)
+- =keymap.c= - =chordal_hold_layout= (requires the keyboard-specific
+  =LAYOUT()= macro and =MATRIX_ROWS=/=MATRIX_COLS=), plus includes for
+  shared code and generated keymap
+- =info.nix= - keyboard metadata
+- =keymap_generated.c= - auto-generated from the =.nix= file (do not edit)
+- =layers.h= - auto-generated layer enum
+
+The X-Bows Knight symlinks its keymap dir to Nature's since both keyboards
+share the same =LAYOUT()= macro (86 keys).
+
+** ZSA Moonlander layout decisions
+
+The Moonlander has 72 keys (vs 86 on the X-Bows) arranged as a split with
+7-column rows and 3-key thumb clusters per side.
+
+Key mapping choices from the X-Bows layout:
+
+- F-row dropped entirely - F1-F12 available on =_ARROWS= layer row 0
+- Inner column keys (7th key each side) used for:
+  - Row 0: ~=~ / ~-~
+  - Row 1: ~[~ / ~]~
+  - Row 2: ~Bksp~ / ~Enter~
+- Big thumb keys (2u): Space (left), Enter (right)
+- Thumb cluster: Space/Gui/Esc (left), Ralt/Rctl/Space (right)
+- Home-row mods preserved in standard QWERTY positions
+- Layer taps unchanged: =L2_ESC= (arrows), =L3_TAB= (mouse), =L5_V= (Danish)
+- PgUp/PgDn moved to right side of row 4
+
 ** Reference
 - https://docs.qmk.fm/features/unicode
 - https://docs.qmk.fm/features/combo
