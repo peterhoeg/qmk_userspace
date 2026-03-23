@@ -10,7 +10,7 @@
 // #define HOLD_ON_OTHER_KEY_PRESS // alternative: PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD // alternative: HOLD_ON_OTHER_KEY_PRESS
 #define PERMISSIVE_HOLD_PER_KEY
-#define TAPPING_TERM 200 // default is 200
+#define TAPPING_TERM 150 // default is 200
 #define TAPPING_TERM_PER_KEY
 #define USB_POLLING_INTERVAL_MS 5
 #define FLOW_TAP_TERM 150
@@ -37,11 +37,6 @@
 // layer toggling
 #define _T_BAS TG(_BASE)
 #define _T_WIN TG(_WINDOWS)
-
-// Danish characters
-#define DK_AE UP(AE_LOWER, AE_UPPER)
-#define DK_OE UP(OE_LOWER, OE_UPPER)
-#define DK_AA UP(AA_LOWER, AA_UPPER)
 
 #define ___ KC_TRNS
 #define _x_ KC_NO

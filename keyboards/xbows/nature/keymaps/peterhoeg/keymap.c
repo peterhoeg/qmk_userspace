@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
-#include "peterhoeg.c"
+#include "peterhoeg.h"
+#include "combos.inc"
 
 /// Per-key handedness for chordal hold opposite-hands rule.
 /// Only the alpha keys need L/R - everything else is exempt ('*')

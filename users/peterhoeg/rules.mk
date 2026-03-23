@@ -1,3 +1,6 @@
+SRC += peterhoeg.c
+SRC += keymap_dk.c
+
 LTO_ENABLE = yes
 
 # things we can do to save space

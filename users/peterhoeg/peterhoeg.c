@@ -1,22 +1,23 @@
-// Shared code included from each keyboard's keymap.c
-// QMK_KEYBOARD_H is already included by the including file
+// Shared userspace code compiled via SRC in rules.mk
+#include "peterhoeg.h"
 #include "version.h"
 
-enum custom_keycodes {
-  C_QMKV = QK_USER_0,
-};
+/// Weak keymap-specific overrides - no-op defaults
+__attribute__((weak))
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+  return true;
+}
 
-/// Combo definitions
-const uint16_t PROGMEM combo_parens_left[] = {KC_Q, KC_W, COMBO_END};
-const uint16_t PROGMEM combo_dk_ae[] = {KC_A, KC_E, COMBO_END};
+__attribute__((weak))
+uint16_t get_tapping_term_keymap(uint16_t keycode, keyrecord_t *record) {
+  return TAPPING_TERM;
+}
 
-/// Combos to output
-combo_t key_combos[] = {
-    COMBO(combo_parens_left, KC_LPRN),
-    COMBO(combo_dk_ae, UP(0xe6, 0xc6)),
-};
-
-#include "keymap_dk.c"
+__attribute__((weak))
+bool get_permissive_hold_keymap(uint16_t keycode, keyrecord_t *record) {
+  // select the hold action when another key is tapped
+  return true;
+}
 
 /// Custom tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -30,7 +31,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   case SC_RAPC:
     return 100;
   default:
-    return TAPPING_TERM;
+    return get_tapping_term_keymap(keycode, record);
   }
 }
 
@@ -46,8 +47,7 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
   case C_GUIA:
     return false;
   default:
-    // select the hold action when another key is tapped.
-    return true;
+    return get_permissive_hold_keymap(keycode, record);
   }
 }
 
@@ -60,6 +60,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return false;
   default:
-    return true;
+    return process_record_keymap(keycode, record);
   }
 }

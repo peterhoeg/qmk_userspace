@@ -1,11 +1,4 @@
-enum unicode_names {
-  AE_LOWER,
-  AE_UPPER,
-  OE_LOWER,
-  OE_UPPER,
-  AA_LOWER,
-  AA_UPPER,
-};
+#include "peterhoeg.h"
 
 const uint32_t PROGMEM unicode_map[] = {
     [AE_LOWER] = 0x00E6, // æ
