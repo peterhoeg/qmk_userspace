@@ -1,0 +1,33 @@
+#!/usr/bin/env nu
+
+# Generate keymap_generated.c and layers.h from the keymap JSON.
+# Called by config.mk when the keymap JSON is newer than the generated files.
+
+def main [dir: string maker: string layout: string] {
+  let keymap = open $"($dir)/($maker)_($layout).json"
+
+  # Extract layer names: _BASE first (default layer), then the rest alphabetically
+  let layer_names = $keymap | get layers | columns | sort-by { $in != "_BASE" }
+
+  # Convert layers attrset to ordered array for qmk json2c (_BASE first)
+  let tmp = mktemp --suffix .json
+  $keymap
+    | upsert layers ($layer_names | each { $keymap.layers | get $in })
+    | to json
+    | save -f $tmp
+  qmk json2c $tmp | lines | skip 1 | str join "\n" | save -f $"($dir)/keymap_generated.c"
+  rm $tmp
+  qmkfmt $"($dir)/keymap_generated.c"
+
+  # Replace numeric layer indices with enum names
+  $layer_names
+    | enumerate
+    | reduce --fold (open $"($dir)/keymap_generated.c") {|entry, acc|
+        $acc | str replace -a $"[($entry.index)] = LAYOUT" $"[($entry.item)] = LAYOUT"
+      }
+    | save -f $"($dir)/keymap_generated.c"
+
+  # Generate layer enum header
+  let enum_body = $layer_names | enumerate | each { if $in.index == 0 { $"($in.item) = 0" } else { $in.item } } | str join ", "
+  $"#pragma once\n\nenum layers { ($enum_body) };\n" | save -f $"($dir)/layers.h"
+}
