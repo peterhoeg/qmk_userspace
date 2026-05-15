@@ -18,6 +18,7 @@
             llvmPackages.clang # for qmk format-c
             podman # much nicer than docker
             qmk # what we're here for
+            usbutils # lsusb, used by the justfile to detect the attached keyboard
             # qmk might have some additional py dependencies, so inject them
             # here. Not sure if it works with py 3.10, so stick to 3.9 for now
             # (python39Packages.python.withPackages (p: with p; [ pillow ]))

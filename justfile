@@ -1,6 +1,16 @@
-MAKER := "xbows"
 LAYOUT := "peterhoeg"
-MODEL := if `hostname` == "dolores" { "knight" } else { "nature" }
+# Detect the attached keyboard by USB VID:PID. Errors out if none of the
+# supported keyboards (knight, nature, moonlander) is detected.
+MODEL := ```
+    out=$(lsusb 2>/dev/null) || true
+    if   echo "$out" | grep -qi 5842:4b6e; then echo knight
+    elif echo "$out" | grep -qi 5842:4e61; then echo nature
+    elif echo "$out" | grep -qi 3297:1969; then echo moonlander
+    else echo "no supported keyboard attached (looked for knight, nature, moonlander)" >&2; exit 1
+    fi
+    ```
+# Pair the maker to the detected model.
+MAKER := if MODEL == "moonlander" { "zsa" } else { "xbows" }
 
 # Show the available targets
 list:
@@ -31,12 +41,12 @@ _make maker model layout sub:
 alias dolores := knight
 
 # X-Bows Knight
-@knight target="flash": (_do MAKER "knight" target)
+@knight target="flash": (_do "xbows" "knight" target)
 
 alias mildred := nature
 
 # X-Bows Nature v3
-@nature target="flash": (_do MAKER "nature" target)
+@nature target="flash": (_do "xbows" "nature" target)
 
 # ZSA Moonlander
 @moonlander target="flash": (_do "zsa" "moonlander" target)
