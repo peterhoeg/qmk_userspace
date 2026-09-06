@@ -12,7 +12,7 @@ def main [dir: string maker: string layout: string] {
   # Convert layers attrset to ordered array for qmk json2c (_BASE first)
   let tmp = mktemp --suffix .json
   $keymap
-    | upsert layers ($layer_names | each { $keymap.layers | get $in })
+    | upsert layers ($layer_names | each {|name| $keymap.layers | get $name })
     | to json
     | save -f $tmp
   qmk json2c $tmp | lines | skip 1 | str join "\n" | save -f $"($dir)/keymap_generated.c"
