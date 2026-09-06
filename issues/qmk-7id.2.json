@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-09-06T19:18:27Z",
+  "description": "README claimed each keymap.c does `#include \"peterhoeg.c\"` for combo\nintrospection. Wrong three ways: peterhoeg.c and keymap_dk.c are compiled\nvia SRC in rules.mk, and the textually included file is combos.inc, which\nis where key_combos[] has to live.\n\nCommits:\n  d930bdc docs: correct how the shared code is pulled in",
+  "id": "qmk-7id.2",
+  "labels": [],
+  "parent": "qmk-7id",
+  "priority": 2,
+  "status": "open",
+  "title": "Correct README's account of how the shared code is included",
+  "type": "task",
+  "updated_at": "2026-09-06T19:18:27Z"
+}
