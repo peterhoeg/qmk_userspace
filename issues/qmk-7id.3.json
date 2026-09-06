@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-09-06T19:18:27Z",
+  "description": "`just config` needed jq (config.mk), nushell (scripts/generate-keymap),\njust itself and qmkfmt, none of them declared - a missing one failed\npartway through generation rather than at shell entry.\n\nqmkfmt is not in nixpkgs; it comes from the localpkgs input\n(gitlab:peterhoeg/pkgs). Take it from that flake's `legacyPackages`, not\n`packages`: the latter filters over the whole set with tryEval, forcing\nevery package in it, and some need SSH access to a private repo.\n\nCommits:\n  063e5c5 build: declare jq, just and nushell in the dev shell\n  ebc8767 build: get qmkfmt from localpkgs\n  9da2bc3 build: take qmkfmt from localpkgs legacyPackages",
+  "id": "qmk-7id.3",
+  "labels": [],
+  "parent": "qmk-7id",
+  "priority": 2,
+  "status": "open",
+  "title": "Declare every build tool in the dev shell",
+  "type": "task",
+  "updated_at": "2026-09-06T19:18:27Z"
+}
