@@ -2,13 +2,14 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-09-06T19:18:31Z",
   "created": "2026-09-06T19:18:14Z",
   "description": "Backfilled after the fact: this work landed on 2026-09-06 without beads.\n\nA sweep of the repo (excluding qmk_firmware) to make the agent-facing\ndocs match reality and to stop the build depending on tools nothing\ndeclared. Findings that drove it:\n\n- knight's keymap dir is a symlink to nature's, so they are one keymap\n- `nix develop .#full --impure` has never worked here: shell.nix imports\n  ./util/nix/sources.nix and util/ is not in the tree or its history\n- jq, just, nushell and qmkfmt were all ambient dependencies of `just config`\n- the Makefile hard-errored unless `qmk config user.qmk_home` was set\n- README described peterhoeg.c as textually included; that is combos.inc\n\nChildren carry the individual commits.",
   "id": "qmk-7id",
   "labels": [],
   "priority": 2,
-  "status": "open",
+  "status": "closed",
   "title": "Bring AGENTS.md, README and the dev shell in line with the repo",
   "type": "epic",
-  "updated_at": "2026-09-06T19:18:14Z"
+  "updated_at": "2026-09-06T19:18:31Z"
 }
