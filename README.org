@@ -14,15 +14,22 @@ Shared code lives in =users/peterhoeg/=, keyboard-specific code in
 
 - =config.h= - tap-hold settings, home-row mod aliases, layer-tap aliases,
   Danish character macros, transparency aliases, disabled features
-- =peterhoeg.c= - custom keycodes, combo definitions, =get_tapping_term()=,
-  =get_permissive_hold()=, =process_record_user()=
-- =keymap_dk.c= - Danish unicode character map (included by =peterhoeg.c=)
+- =peterhoeg.h= - custom keycodes, unicode names, weak override declarations
+- =peterhoeg.c= - =get_tapping_term()=, =get_permissive_hold()=,
+  =process_record_user()=
+- =keymap_dk.c= - Danish unicode character map
+- =combos.inc= - combo definitions
 - =rules.mk= - QMK feature flags (combos, caps word, NKRO, unicode, etc.)
 
 The shared =config.h= is auto-included by QMK before any keyboard config.
-The shared =peterhoeg.c= is textually included (=#include "peterhoeg.c"=)
-from each keyboard's =keymap.c= so that QMK's combo introspection can find
-=key_combos[]= in the keymap compilation unit.
+=peterhoeg.c= and =keymap_dk.c= are compiled as their own translation units
+via =SRC= in =rules.mk=. =combos.inc= is the exception: each keyboard's
+=keymap.c= textually includes it (=#include "combos.inc"=) so that QMK's
+combo introspection finds =key_combos[]= in the keymap compilation unit.
+
+A keyboard adds its own behaviour through the weak =process_record_keymap()=,
+=get_tapping_term_keymap()= and =get_permissive_hold_keymap()= hooks declared
+in =peterhoeg.h=; the shared code falls back to no-op defaults.
 
 *** =keyboards/<maker>/<model>/keymaps/peterhoeg/= - per-keyboard
 
