@@ -2,13 +2,14 @@
   "assignee": "Peter H. Hoeg",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-09-06T18:38:52Z",
   "created": "2026-09-06T18:38:24Z",
   "description": "`scripts/generate-keymap` pipes `qmk json2c` straight into `save -f`:\n\n  qmk json2c $tmp | lines | skip 1 | str join \"\\n\" | save -f $\"($dir)/keymap_generated.c\"\n\nThe pipeline runs to completion before the external command's non-zero\nexit surfaces, so a failed json2c writes 0 bytes over the committed\n`keymap_generated.c`. Make only reports the error afterwards, by which\npoint the file is already gone.\n\nSeen twice on 2026-09-06, both times because the container's bundled\n`qmk` had no `json2c` subcommand until `qmk config user.qmk_home` was\npointed at the submodule. Recovered from git both times; on a dirty tree\nthere would have been nothing to recover from.\n\nFix: capture with `| complete`, check `exit_code`, and only `save` on\nsuccess. Clean up the temp file either way.",
   "id": "qmk-dwg",
   "labels": [],
   "priority": 1,
-  "status": "in_progress",
+  "status": "closed",
   "title": "generate-keymap truncates keymap_generated.c when qmk json2c fails",
   "type": "bug",
-  "updated_at": "2026-09-06T18:38:30Z"
+  "updated_at": "2026-09-06T18:38:52Z"
 }
