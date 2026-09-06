@@ -16,7 +16,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      inherit (localpkgs.packages.${system}) qmkfmt;
+      inherit (localpkgs.legacyPackages.${system}) qmkfmt;
     in
     {
       devShells.${system} = {

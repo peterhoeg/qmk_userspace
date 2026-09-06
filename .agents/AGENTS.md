@@ -46,7 +46,7 @@ The keyboard is detected by USB VID:PID via `lsusb`, and `just` errors out when 
 
 Nix flake via direnv (`.envrc`). Entering the directory loads `devShells.default`, which provides `beadwork`, `clang`, `jq`, `just`, `nushell`, `podman`, `qmk`, `qmkfmt` and `usbutils`.
 
-Everything there is nixpkgs except `qmkfmt`, which comes from the `localpkgs` input (`gitlab:peterhoeg/pkgs`). That input fetches a private repo over SSH during evaluation, so the shell will not evaluate without credentials for it.
+Everything there is nixpkgs except `qmkfmt`, which comes from the `localpkgs` input (`gitlab:peterhoeg/pkgs`). Take it from that flake's `legacyPackages`, never its `packages`: the latter filters over the whole set and so forces every package in it, and some of those need SSH access to a private repo.
 
 The `full` shell (`nix develop .#full --impure`) is currently broken: `shell.nix` imports `./util/nix/sources.nix`, and `util/` does not exist in the worktree or anywhere in this repo's history.
 
@@ -77,7 +77,7 @@ Six layers, the same set on every keyboard: `_BASE`, `_ARROWS`, `_DANISH`, `_MOU
 
 C code: `.clang-format` (LLVM style, 2-space indent, 140 char line limit). `.editorconfig` sets a 4-space default for everything else, and tabs in `Makefile`/`*.mk`.
 
-`scripts/generate-keymap` finishes by running `qmkfmt` over the generated C, but the committed result matches neither this repo's `.clang-format` nor `qmk_firmware`'s - it keeps `qmk json2c`'s own 4-space, one-layer-per-line layout. Leave those files alone rather than reformatting them by hand.
+`scripts/generate-keymap` finishes by running `qmkfmt` (rcorre/qmkfmt) over the generated C: it lays out the keymap grids itself, then shells out to a store-pinned `clang-format` for the rest. Reformat those files with `qmkfmt <file>`, never by hand or with `clang-format` alone.
 
 ## Work Management
 
