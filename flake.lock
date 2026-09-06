@@ -1,5 +1,49 @@
 {
   "nodes": {
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "localpkgs",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1787555220,
+        "narHash": "sha256-ZNw7FDQm2PVOIyE9WaLFgK1QYw8vrOchxMYHzDDxlUY=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "2013c981829bd5e93db06749b5639450c81bece3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
+    "localpkgs": {
+      "inputs": {
+        "fenix": "fenix",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "treefmt-nix": "treefmt-nix"
+      },
+      "locked": {
+        "lastModified": 1788291976,
+        "narHash": "sha256-uT1j2OxsWZwyLaVfaM9TjuNLO/xND1gQDgZHdl5/DXE=",
+        "owner": "peterhoeg",
+        "repo": "pkgs",
+        "rev": "c2c369994acaaea3b0178a8e6234e6342f609ff7",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "peterhoeg",
+        "repo": "pkgs",
+        "type": "gitlab"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1788614874,
@@ -18,7 +62,46 @@
     },
     "root": {
       "inputs": {
+        "localpkgs": "localpkgs",
         "nixpkgs": "nixpkgs"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787472531,
+        "narHash": "sha256-cq+wrv+Zadl1NiJIWxYKHpcXfUQXDKBYa/7eq0JWFZk=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "5c156cdfb047ea171ba255dcdcd86236d98a389e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "localpkgs",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786901030,
+        "narHash": "sha256-WSFCsDSE5ffgD2MqzkM2CYjeFiKhRF/dJUN8uedb6YE=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "27b3b12a8e6375f28ebe122f07d230ca5459bbfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
       }
     }
   },
