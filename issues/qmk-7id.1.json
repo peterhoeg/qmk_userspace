@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-09-06T19:18:27Z",
+  "description": "The QMK sections of the project instructions were lost when .claude/\nbecame .agents/ - they had never been tracked, so only the beadwork\nsnippet survived the move. Restored from context, then rewritten against\na full read of the repo: added the Layers and CI sections, the knight\nsymlink, the broken `full` devShell, combos.inc and the weak *_keymap()\nhooks, and pointed at README.org rather than duplicating it.\n\nCommits:\n  40fa4dc docs: restore project instructions\n  d9e6685 docs: drop emdashes\n  2be542d docs: document the moonlander\n  f10a18c docs: bring AGENTS.md in line with the repo",
+  "id": "qmk-7id.1",
+  "labels": [],
+  "parent": "qmk-7id",
+  "priority": 2,
+  "status": "open",
+  "title": "Restore and rewrite AGENTS.md against the actual repo",
+  "type": "task",
+  "updated_at": "2026-09-06T19:18:27Z"
+}
