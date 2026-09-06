@@ -17,7 +17,10 @@
         default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
             beadwork
+            jq # config.mk pretty-prints the generated JSON with it
+            just # the justfile is the entry point for everything
             llvmPackages.clang # for qmk format-c
+            nushell # scripts/generate-keymap is written in it
             podman # much nicer than docker
             qmk # what we're here for
             usbutils # lsusb, used by the justfile to detect the attached keyboard
