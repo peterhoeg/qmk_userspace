@@ -2,14 +2,15 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-09-06T19:18:31Z",
   "created": "2026-09-06T19:18:28Z",
   "description": "Both info.json files lacked the trailing newline `jq .` emits, so every\n`just config` left them dirty and they could never be reproduced by the\npipeline that generates them.\n\nCommits:\n  b2e3126 chore: commit info.json as jq actually writes it",
   "id": "qmk-7id.5",
   "labels": [],
   "parent": "qmk-7id",
   "priority": 2,
-  "status": "open",
+  "status": "closed",
   "title": "Commit info.json as jq actually writes it",
   "type": "task",
-  "updated_at": "2026-09-06T19:18:28Z"
+  "updated_at": "2026-09-06T19:18:31Z"
 }
