@@ -15,8 +15,13 @@ def main [dir: string maker: string layout: string] {
     | upsert layers ($layer_names | each {|name| $keymap.layers | get $name })
     | to json
     | save -f $tmp
-  qmk json2c $tmp | lines | skip 1 | str join "\n" | save -f $"($dir)/keymap_generated.c"
+  # capture rather than pipe: a failed json2c would otherwise save 0 bytes over the target
+  let generated = qmk json2c $tmp | complete
   rm $tmp
+  if $generated.exit_code != 0 {
+    error make { msg: $"qmk json2c failed: ($generated.stderr)" }
+  }
+  $generated.stdout | lines | skip 1 | str join "\n" | save -f $"($dir)/keymap_generated.c"
   qmkfmt $"($dir)/keymap_generated.c"
 
   # Replace numeric layer indices with enum names
