@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-09-06T19:18:27Z",
+  "description": "A fresh clone has the submodule but no `qmk config user.qmk_home`, and\nevery make target died on that before doing anything.\n\nCommits:\n  2694151 build: fall back to the bundled qmk_firmware",
+  "id": "qmk-7id.4",
+  "labels": [],
+  "parent": "qmk-7id",
+  "priority": 2,
+  "status": "open",
+  "title": "Fall back to the bundled qmk_firmware submodule",
+  "type": "task",
+  "updated_at": "2026-09-06T19:18:27Z"
+}
