@@ -3,7 +3,8 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -15,6 +16,7 @@
 
         default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
+            beadwork
             llvmPackages.clang # for qmk format-c
             podman # much nicer than docker
             qmk # what we're here for
