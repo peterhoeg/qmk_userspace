@@ -2,13 +2,14 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-09-06T15:17:41Z",
   "created": "2026-09-06T15:17:37Z",
   "description": "`just moonlander` failed in scripts/generate-keymap with:\n\n  Error: nu::shell::cant_convert\n  can't convert record\u003c_ARROWS: list\u003cstring\u003e, _BASE: ...\u003e to cell-path\n\nCause: in nushell `$in` rebinds at every pipe. Inside\n\n  each { $keymap.layers | get $in }\n\nthe `$keymap.layers |` starts a new pipeline, so `$in` at `get` is the\nlayers *record*, not the layer name from the closure's input.\n\nFix: name the closure parameter.\n\n  each {|name| $keymap.layers | get $name }\n\nFindings worth keeping:\n\n- The reported outer error pointed at line 10 (`columns`), not line 15\n  where the failure was. Nushell attributes an error's \"source value\"\n  span to where the value was *created*; the layer-name strings come\n  from `columns` on line 10. Red herring - read the inner error first.\n\n- xbows never hit this. `keymap_generated.c` is committed for xbows and\n  `*peterhoeg*.json` is gitignored, so make only runs the script on a\n  first fresh generation. Moonlander was the first.\n\n- Verified in-container: transform yields 6 layers, _BASE first, 72 keys\n  each. The trailing `qmk json2c` and `qmkfmt` steps could not be run\n  (neither is on PATH in the container) but are untouched by the fix.\n\nLanded in 2ba8b52 \"fix: keymap generator\".",
   "id": "qmk-k00",
   "labels": [],
   "priority": 2,
-  "status": "open",
+  "status": "closed",
   "title": "generate-keymap: $in rebinds at every pipe, breaking layer lookup",
   "type": "bug",
-  "updated_at": "2026-09-06T15:17:37Z"
+  "updated_at": "2026-09-06T15:17:41Z"
 }
