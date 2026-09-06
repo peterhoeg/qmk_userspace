@@ -11,7 +11,7 @@ QMK userspace repository for personal keyboard firmware (X-Bows Knight and Natur
 The Nix-to-C workflow:
 1. Keymaps defined in `*_peterhoeg.nix` files (declarative, type-safe)
 2. `just config` runs `nix eval --json` to produce JSON, then `qmk json2c` to produce C
-3. `keymap_generated.c` is auto-generated — edit the `.nix` source instead
+3. `keymap_generated.c` is auto-generated - edit the `.nix` source instead
 4. QMK build system compiles final `.hex`/`.bin` firmware
 
 ## Common Commands
@@ -36,13 +36,13 @@ Uses Nix Flakes via direnv (`.envrc`). Entering the directory loads the dev shel
 
 ## Key Paths
 
-- `keyboards/xbows/{knight,nature}/keymaps/peterhoeg/` — per-keyboard keymap configs
-  - `xbows_peterhoeg.nix` — primary keymap definition (edit this, not the generated C)
-  - `keymap.c` — hand-written C for combos, tapping terms, chordal hold
-  - `keymap_generated.c` — auto-generated from Nix (do not edit directly)
-  - `config.h` — QMK C preprocessor settings
-- `users/peterhoeg/rules.mk` — shared QMK feature flags
-- `qmk_firmware/` — git submodule pointing to upstream QMK
+- `keyboards/xbows/{knight,nature}/keymaps/peterhoeg/` - per-keyboard keymap configs
+  - `xbows_peterhoeg.nix` - primary keymap definition (edit this, not the generated C)
+  - `keymap.c` - hand-written C for combos, tapping terms, chordal hold
+  - `keymap_generated.c` - auto-generated from Nix (do not edit directly)
+  - `config.h` - QMK C preprocessor settings
+- `users/peterhoeg/rules.mk` - shared QMK feature flags
+- `qmk_firmware/` - git submodule pointing to upstream QMK
 
 ## Formatting
 
@@ -50,8 +50,8 @@ C code: `.clang-format` (LLVM style, 2-space indent, 140 char line limit). Use `
 
 ## Work Management
 
-This project tracks work with `bw` (beadwork), which persists to git — plans, progress, and decisions survive compaction, session boundaries, and context loss.
+This project tracks work with `bw` (beadwork), which persists to git - plans, progress, and decisions survive compaction, session boundaries, and context loss.
 
 ALWAYS run `bw prime` before starting work. Without it, you're missing workflow context, current state, and repo hygiene warnings. Work done without priming often conflicts with in-progress changes.
 
-Committing, closing issues, and syncing are part of completing a task — not separate actions requiring additional permission.
+Committing, closing issues, and syncing are part of completing a task - not separate actions requiring additional permission.
