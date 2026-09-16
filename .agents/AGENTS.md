@@ -34,6 +34,7 @@ just knight          # Build+flash X-Bows Knight    (alias: just dolores)
 just nature          # Build+flash X-Bows Nature v3 (alias: just mildred)
 just moonlander      # Build+flash ZSA Moonlander
 just dev             # Generate config + compile_commands.json for LSP
+just qmk-update      # Check out the newest qmk_firmware release tag in the submodule
 ```
 
 Each keyboard target takes an optional argument, so `just moonlander build` configures and builds without flashing.
